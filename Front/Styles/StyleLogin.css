@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+:root{
+    --white: #FFF;
+    --whitesmoke: #F9F9F9;
+    --light-grey: #ECECEC;
+    --grey: #C4C4C4;
+    --medium-grey: #A7A7A7;
+    --deep-grey: #343434;
+    --black: #000000;
+    --blue: #1B77F3;
+    --red: #fb1161;
+    --dark-background: rgb(22, 22, 22);
+    --dark-color: #bc13fe;
+}
+
+main{
+    display: flex;
+}
+.Login{
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 500px;
+    min-height: 100vh;
+    padding: clamp(35px,8%, 70px);
+    transition: all ease 1s;
+    
+}
+
+.Wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#After_Button_Login{
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 0px 30px;
+    text-align: center;
+}
+
+.Login_Logo{
+    width: 105px;
+    margin-bottom: 40px;
+}
+
+.Login_Tile{
+    color: var(--deep-grey);
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.Login_Label{
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.Input{
+    width: 100%;
+    background-color: var(--light-grey);
+    border: 2px solid rgba(0,0,0,0);
+    border-radius: 5px;
+    outline: none;
+    font-size: 0.9em;
+    padding: 25px 10px 10px;
+    font-weight: 600;
+    color: var(--deep-grey);
+}
+
+.Login_Label span{
+    position: absolute;
+    font-size: 0.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color:var(--medium-grey);
+    margin: 20px;
+    cursor: text;
+    transition: all 200ms ease;
+}
+
+.Input:focus{
+    background-color: var(--whitesmoke);
+    border: 2px solid var(--deep-grey);
+
+}
+
+.Login_Label .Span-Active{
+    font-size: 0.7em;
+    margin: 8px 10px;
+}
+
+.Login_Icons{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.Login_Icons img{
+    width: 20px;
+}
+
+.Icons_Button{
+    width: 33.33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.Login_Icons .Icons_Button:nth-child(1){
+    background-color: var(--blue);
+}
+
+.Login_Icons .Icons_Button:nth-child(2){
+    background-color: var(--light-grey);
+}
+
+.Login_Icons .Icons_Button:nth-child(3){
+    background-color: var(--black);
+}
+
+.Login_Label--Checkbox{
+    font-size: 0.9em;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.Input--Checkbox{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: var(--light-grey);
+    margin-right: 8px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.Input--Checkbox:checked{
+    background-color: var(--red);
+}
+.Input--Checkbox:checked::after{
+    content: "";
+    display: block;
+    width: 5px;
+    height: 10px;
+    border: 3px solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    margin: 2px 6px;
+}
+
+.Login_Button{
+    width: 150px;
+    height: 60px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 300ms ease;
+    background-color: var(--red);
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 23px;
+    color: var(--white);
+}
+
+.Login_Button:disabled{
+    cursor: auto;
+    background-color: white;
+    border: 2px solid var(--light-grey);
+    color: var(--medium-grey);
+}
+
+.Login_Link{
+    font-size: 0.8em;
+    text-decoration: none;
+    color: var(--medium-grey);
+    text-transform: uppercase;
+    font-weight: 700;
+    min-width: 150px;
+    transition: all ease 1s;
+}
+
+.Login_Link:hover{
+    color: var(--red);
+}
+
+.Wallpaper{
+    width: 100%;
+    background-image: url(../Src/wallpaper.jpg);
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+    transition: all ease 1s;
+}
+
+#Link{
+    appearance: none;
+    outline: none;
+    cursor: auto;
+}
+.Login.dark-mode{
+    background-color: var(--dark-background);
+    transition: all ease 1s;
+}
+
+.dark-mode .Login_Logo{
+    fill: white;
+	stroke: white;
+    filter: blur(0) drop-shadow(-5px 5px 5px #bc13fe);
+	transition: all ease 1s;
+}
+.dark-mode .Input{
+    background-color: var(--deep-grey);
+    color: var(--whitesmoke);
+}
+
+.dark-mode .Input:focus{
+    border: 2px solid var(--medium-grey);
+    box-shadow: 0 0 .2rem #fff,
+    0 0 .2rem #fff,
+    0 0 2rem #bc13fe,
+    0 0 0.8rem #bc13fe,
+    0 0 2.8rem #bc13fe,
+    inset 0 0 1.3rem #bc13fe; 
+}
+.dark-mode label{
+    color: var(--whitesmoke);
+}
+
+.dark-mode .Input--Checkbox:checked{
+    background-color: var(--dark-color);
+    box-shadow: 0 0 .2rem #fff,
+    0 0 .2rem #fff,
+    0 0 2rem #bc13fe,
+    0 0 0.8rem #bc13fe,
+    0 0 2.8rem #bc13fe,
+    inset 0 0 1.3rem #bc13fe; 
+
+}
+.dark-mode h1{
+    color: #fff;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #bc13fe,
+      0 0 42px #bc13fe;
+}
+
+.dark-mode span{
+    color: white;
+}
+
+.dark-mode .Login_Link{
+	transition: all ease 1s;
+}
+
+.dark-mode .Login_Link:hover{
+    color: #fff;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #bc13fe,
+      0 0 42px #bc13fe;
+}
+
+.dark-mode .Login_Button{
+    box-shadow: 0 0 .2rem #fff,
+    0 0 .2rem #fff,
+    0 0 2rem #bc13fe,
+    0 0 0.8rem #bc13fe,
+    inset 0 0 1.3rem #bc13fe; 
+    animation: pulsate 1.5s infinite alternate;
+    color: var(--whitesmoke);
+    background-color: var(--black);  
+}
+
+.dark-mode .Login_Icons .Icons_Button:nth-child(1){
+    background-color: #000000;
+}
+.dark-mode .Login_Icons .Icons_Button:nth-child(2){
+    background-color: #000000;
+}
+.dark-mode .Login_Icons .Icons_Button:nth-child(3){
+    background-color: #000000;
+}
+
+.dark-mode .Login_Button:disabled{
+    cursor: auto;
+    background-color: var(--medium-grey);
+    border: 2px solid var(--deep-grey);
+    color: var(--light-grey);
+    box-shadow: 0 0 0 0;
+    animation: pulsate 1.5s infinite alternate;
+}
+
+.Wallpaper.dark-mode {
+    background-image: url(../Src/wallpaper-dark.jpg);
+    transition: all ease 1s;
+}
